@@ -5,9 +5,9 @@ const { listarUsuarios,
     excluirUsuario } = require('../controllers/membros');
 const rotas = express();
 
+rotas.get('/usuarios', listarUsuarios);
 rotas.post('/usuarios', cadastrarUsuario);
 rotas.put('/usuarios', atualizarUsuario);
-rotas.get('/usuarios', listarUsuarios);
 rotas.delete('/usuarios/:id', excluirUsuario);
 
 module.exports = rotas;
